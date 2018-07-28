@@ -4,5 +4,8 @@
     <input type="text" placeholder="add trip title" [(ngModel)]="newTrip.title"/>
     <button (click)="addTrip(newTrip)">Add trip</button>
   </div>
-  <div class="trip" *ngFor="let trip of trips">{{trip.title}}</div>
+  <div class="trip" *ngFor="let trip of trips">{{trip.title}}
+  <button (click)="deleteTrip(trip)">Delete Trip</button>
+
+  </div>
   </div>

@@ -21,6 +21,10 @@ export class AppComponent {
   getTrips(){
     this.trips =  this.tripDataService.getTrips();
   }
+  deleteTrip(newTrip){
+    console.log(newTrip);
+    this.tripDataService.deleteTrip(newTrip);
+  }
   ngOnInit() {
     this.getTrips();
   }

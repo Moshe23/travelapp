@@ -16,8 +16,12 @@ export class TripDataService {
   id: number = 1;
   constructor() { }
   getTrips() {
-
     return this.trips;
-
+  }
+  deleteTrip(newTrip) {
+    const index = this.trips.indexOf(newTrip);
+    if (index > 0) {
+      this.trips.splice(index, 1);
+    }
   }
 }
